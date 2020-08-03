@@ -1,14 +1,21 @@
-# FastAPI
+# Fake Job Classification
 
 ## Introduction
 
-This houses a basic API for the fraudulent job classifcation model. The API will return back real or fake depending on the inputs given. There are 4 parameters that can be adjusted including the company profile and job description. 
+The unemployment rate in the United States acording to the US Department of Labor as of June 2020 is at 11.1%$^1$. Although there are many factors causing contributing to the current unemployment rate, many people in the US and worldwide need to look for new jobs due to job loss and other financial hardships. As all of the job postings are done online now, most companies can directly post to job boards or have job data pulled from job aggregators. However, not all job postings are true job postings as some are fradulent job postings used to harvest data or other sensitive information towards desperate job seekers$^2$. Using the advances in natural learning processing, it should be possible to build a classifier to be able to detect potential fake jobs. This is an important task as many people will be applying for jobs online due to the current unemployment situation, and minimizing victims of scams due to fradulent job postings will be important for economic recovery.
 
-## Requirements
-The pipfile contains all of the library requirements needed to run this api server. Additionally, `scikit-learn` needs to be `0.22.2.post1` as the models were pickled using that version.
+Using data gathered from the University of Aegean about various job postings from many different job sites, it should be possible to build some a classifer for potential fake job postings. Job posts typically are text rich with general job descriptions and typically some additional information such as telecommuting options and employment type. With all of these features, it should be possible to build a complex model using features from the job description using NLP or even more simple features with simplier models. This project will use three models and with the most simple model being the baseline model to compare against.
 
-## How to run
-    uvicorn main:app --reload
+1. Simple model using non-NLP features such as comparing correlations of job function to fraudulent postings
+2. Intermediate model using NLP tokenization features and modeling relationship of fraudent job postings using more traditional machine learning algorithms such as logistic regression or SVMs
+3. Complex model using state of the art transformer neural network models to predict fradulent job postings 
+
+## Data Description
+The dataset originally was downloaded from [kaggle](https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction). The dataset hosted there is originally from the [University of Aegean](http://emscad.samos.aegean.gr/). This dataset is a publicly available dataset containing almost ~18,000 job ads with human classified fake jobs. This dataset is based on job ads published between 2012 and 2014. There are ~17000 true jobs and ~900 fake jobs in the dataset.  
+
+
+## System Requirements
+Nvidia GPU
 
 ### Endpoints
     
@@ -18,5 +25,5 @@ The pipfile contains all of the library requirements needed to run this api serv
     	benefits - Job Benefits
     	requirements - Requirements for Job
 
-### How to submit queries
+### References
     localhost:8000/predict/?company_profile='quack quack'&description="moo"&benefits="pet a dog"&requirements="human"
