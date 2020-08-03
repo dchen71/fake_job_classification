@@ -11,7 +11,7 @@ Using data gathered from the University of Aegean about various job postings fro
 3. Complex model using state of the art transformer neural network models to predict fradulent job postings 
 
 ## Data Description
-The dataset originally was downloaded from [kaggle](https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction). The dataset hosted there is originally from the [University of Aegean](http://emscad.samos.aegean.gr/). This dataset is a publicly available dataset containing almost ~18,000 job ads with human classified fake jobs. This dataset is based on job ads published between 2012 and 2014. There are ~17000 true jobs and ~900 fake jobs in the dataset.  
+The dataset originally was downloaded from [kaggle](https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction). The dataset hosted there is originally from the [University of Aegean](http://emscad.samos.aegean.gr/). This dataset is a publicly available dataset containing almost ~18,000 job ads with human classified fake jobs. This dataset is based on job ads published between 2012 and 2014. There are ~17000 true jobs and ~900 fake jobs in the dataset. The data was augmented using a variety of measures including synonymous adjectives and downsampling to deal with the class imbalances in the dataset.  
 
 
 ## System Requirements
@@ -19,6 +19,12 @@ NVIDIA GPU
 
 ## API
 An API to serve the model can be found in the `fastapi` folder including instructions to run it.
+
+## Models Tested
+SVM
+Logistic Regression
+Random Forest
+Roberta
 
 ## References
 
