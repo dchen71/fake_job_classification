@@ -21,10 +21,10 @@ NVIDIA GPU
 An API to serve the model can be found in the `fastapi` folder including instructions to run it.
 
 ## Models Tested
-SVM
-Logistic Regression
-Random Forest
-Roberta
+SVM  
+Logistic Regression  
+Random Forest  
+Roberta  
 
 ## References
 
