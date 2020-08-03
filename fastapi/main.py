@@ -54,7 +54,7 @@ async def read_root():
 
 # Prediction GET endpoint
 @app.get("/predict/")
-async def predict_job(company_profile: str = None, requirements: str = None, benefits: str = None, description: str = None):
+async def predict_job(company_profile: str = '', requirements: str = '', benefits: str = '', description: str = ''):
     x_test = pd.DataFrame({'company_profile': company_profile, 'requirements': requirements, 'benefits': benefits, 'description': description}, index=[0])
     pred = predict_ensemble(x_test)
     pred = "Real" if pred == 0 else "Fraudulent"
