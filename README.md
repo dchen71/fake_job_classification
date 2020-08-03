@@ -17,3 +17,11 @@ The dataset originally was downloaded from [kaggle](https://www.kaggle.com/shiva
 ## System Requirements
 NVIDIA GPU
 
+## API
+An API to serve the model can be found in the `fastapi` folder including instructions to run it.
+
+## References
+
+1. Bureau of Labor Statistics US Department of Labor. The Employment Situation - June 2020. Accessed 07/26/2020. https://www.bls.gov/news.release/pdf/empsit.pdf  
+2. USC Career Center. Avoid Fradulent Job Postings. Accessed 07/26/2020. https://careers.usc.edu/students/find-a-job/avoid-fraudulent-job-postings/  
+3. Rajapakse, Thilina. Simple Transformers - Introducing the Easiest Way To Use BERT, RoBERTa, XLNet, and XLM.Accessed 07/26/2020. https://towardsdatascience.com/simple-transformers-introducing-the-easiest-bert-roberta-xlnet-and-xlm-library-58bf8c59b2a3
